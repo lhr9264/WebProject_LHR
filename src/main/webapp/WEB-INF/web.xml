@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>WebProject_LHR</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+ 
+<!--
+컨텍스트 초기화 파라미터(매개변수) : 웹 애플리케이션 전체에서 접근하여 사용할 수 있는 상수를 가리킨다.
+String 형태로 저장되고, 주로 프로그램에서 사용할 설정값을 기술한다. 
+-->
+<context-param>
+	<param-name>INIT_PARAM</param-name>
+	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
+</context-param> 
+
+<!-- 오라클 JDBC를 위한 드라이버 및 연결 정보 -->
+<context-param>
+	<param-name>OracleDriver</param-name>
+	<param-value>oracle.jdbc.OracleDriver</param-value>
+</context-param>
+<context-param>
+	<param-name>OracleURL</param-name>
+	<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+</context-param>
+<context-param>
+	<param-name>OracleId</param-name>
+	<param-value>webproject</param-value>
+</context-param>
+<context-param>
+	<param-name>OraclePwd</param-name>
+	<param-value>1234</param-value>
+</context-param>
+ 
+</web-app>
+
