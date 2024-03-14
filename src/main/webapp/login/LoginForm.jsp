@@ -32,7 +32,7 @@
                         <button type="submit">넥슨ID(이메일) 로그인</button>
                     </div>
                      <div class="login_box">
-                        <a href="/">회원가입</a>
+                        <a href="../register/RegisterForm.jsp">회원가입</a>
                         <a href="/">넥슨ID 찾기</a>
                         <a href="/">비밀번호 찾기</a>
                     </div>

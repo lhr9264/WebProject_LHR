@@ -36,7 +36,7 @@ if (!isDuplicate) {
 %>
 <script>
     alert('회원 가입이 완료되었습니다.');
-    window.location.href = '../main/home.jsp';
+    window.location.href = '../login/LoginForm.jsp';
 </script>
 <%
     } else {

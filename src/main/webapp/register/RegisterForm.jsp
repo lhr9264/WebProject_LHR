@@ -34,6 +34,9 @@
                     <div>
                         <button type="submit">가입하기</button>
                     </div>
+                    <div class="login_box">
+                        <a href="../login/LoginForm.jsp">로그인</a>
+                    </div>
                 </form>
             </div>
         </div>

@@ -69,3 +69,19 @@
     background-color: #0077ff;
     cursor: pointer;
 }
+
+.contents .login_box {
+    height: 40px;
+    padding-top: 12px;
+}
+.contents .login_box a{
+    font-weight: 700;
+    letter-spacing: -.6px;
+    color: #737881;
+    margin-right: 8px;
+    text-decoration: none;
+    transition: all .15s;
+}
+.contents .login_box a:hover {
+    color: #0077ff;
+}

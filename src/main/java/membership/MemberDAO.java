@@ -17,31 +17,8 @@ public class MemberDAO extends JDBConnect{
 	public MemberDAO(ServletContext application) {
 		super(application);
 	}
-
 	
 	
-	public MemberDTO getMemberDTO(String uid, String upass) {
-		MemberDTO dto = new MemberDTO();
-		String query = "SELECT * FROM member WHERE id=? AND pass=?";
-		
-		try {
-			psmt = con.prepareStatement(query);
-			psmt.setString(1, uid);
-			psmt.setString(2, upass);
-			rs = psmt.executeQuery();
-			if (rs.next()) {
-				dto.setId(rs.getString("id"));
-				dto.setPass(rs.getString("pass"));
-				dto.setName(rs.getString("name"));
-				dto.setRegidate(rs.getString("regidate"));
-			}
-		}
-		catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		return dto;
-	}
 	
 	// 아이디 중복 체크
 	public boolean checkDuplicateId(String id) {
@@ -83,4 +60,53 @@ public class MemberDAO extends JDBConnect{
             return false; // 오류 발생 시 회원 추가 실패로 처리
         }
     }
+    
+    //로그인
+//    public boolean login(String id, String pass) {
+//    	String query = "SELECT COUNT(*) FROM member WHERE id=? AND pass=?";
+//    	
+//    	try (PreparedStatement psmt = con.prepareStatement(query)) {
+//    		psmt.setString(1, id);
+//    		psmt.setString(2, pass);
+//    		ResultSet rs = psmt.executeQuery();
+//    		if (rs.next()) {
+//    			int count = rs.getInt(1);
+//    			return count > 0;
+//    		}
+//    	} catch (SQLException e) {
+//    		e.printStackTrace();
+//    	}
+//    	
+//    	return false;
+//    }
+    
+    public MemberDTO getMemberDTO(String id, String pass) {
+		MemberDTO dto = new MemberDTO();
+		/* 로그인 폼에서 입력한 아이디, 패스워드를 통해 인파라미터를 설정할
+		수 있또록 쿼리문을 작성 */
+		String query = "SELECT * FROM member WHERE id=? AND pass=?";
+		
+		try {
+			//쿼리문 실행과 인파라미터 설정을 위한 prepared 인스턴스 생성
+			psmt = con.prepareStatement(query);
+			//인파라미터를 설정
+			psmt.setString(1, id);
+			psmt.setString(2, pass);
+			//쿼리문을 실행한 후 결과는 ResultSet을 통해 반환
+			rs = psmt.executeQuery();
+			//반환된 ResultSet에 회원정보가 저장되어 있는지 확인
+			if (rs.next()) {
+				//정보가 있다면 DTO에 저장한다.
+				dto.setId(rs.getString("id"));
+				dto.setName(rs.getString(2));
+				dto.setPass(rs.getString("pass"));
+				dto.setRegidate(rs.getString(4));
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return dto;
+	}
 }
