@@ -4,8 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" type="text/css" href="../css/register.css">
 <title>회원가입</title>
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        const success = urlParams.get('success');
+
+        if (error === 'idEmpty') {
+            alert('아이디를 입력해주세요.');
+        } else if (error === 'passwordEmpty') {
+            alert('비밀번호를 입력해주세요.');
+        } else if (error === 'nameEmpty') {
+	        alert('이름을 입력해주세요.');
+        } else if (error === 'duplicateId') {
+            alert('이미 사용 중인 아이디입니다.');
+        } else if (success === 'true') {
+            alert('회원가입이 완료되었습니다.');
+        }
+    }
+</script>
 </head>
 <body>
     <div id="wrapper">
@@ -21,7 +40,7 @@
         </div>
         <div class="contents">
             <div class="registerSec">
-                <form action="RegisterProcess.jsp" method="post">
+                <form action="../membership/register.do" method="post">
                     <div class="register_input">
                         <input type="text" id="id" name="id" placeholder="아이디 또는 이메일">
                     </div>
@@ -35,7 +54,7 @@
                         <button type="submit">가입하기</button>
                     </div>
                     <div class="login_box">
-                        <a href="../login/LoginForm.jsp">로그인</a>
+                        <a href='../membership/login.do'>로그인</a>
                     </div>
                 </form>
             </div>

@@ -9,7 +9,22 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
- 
+ <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+        <param-name>forceEncoding</param-name>
+        <param-value>true</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
 <!--
 컨텍스트 초기화 파라미터(매개변수) : 웹 애플리케이션 전체에서 접근하여 사용할 수 있는 상수를 가리킨다.
 String 형태로 저장되고, 주로 프로그램에서 사용할 설정값을 기술한다. 
@@ -36,6 +51,54 @@ String 형태로 저장되고, 주로 프로그램에서 사용할 설정값을 
 	<param-name>OraclePwd</param-name>
 	<param-value>1234</param-value>
 </context-param>
- 
+<!-- 세선 유지시간 -->
+<session-config>
+ <session-timeout>20</session-timeout>
+</session-config>
+
+<servlet>
+	<servlet-name>RegisterController</servlet-name>
+	<servlet-class>membership.RegisterController</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RegisterController</servlet-name>
+    <url-pattern>/membership/register.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>LoginController</servlet-name>
+	<servlet-class>membership.LoginController</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/membership/login.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>LogoutController</servlet-name>
+	<servlet-class>membership.LogoutController</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LogoutController</servlet-name>
+    <url-pattern>/membership/logout.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>InfoEditController</servlet-name>
+	<servlet-class>membership.InfoEditController</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>InfoEditController</servlet-name>
+    <url-pattern>/membership/infoEdit.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+    <url-pattern>*.svg</url-pattern>
+    <url-pattern>*.gif</url-pattern>
+</servlet-mapping>
 </web-app>
+
+
 

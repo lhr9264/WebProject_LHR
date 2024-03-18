@@ -4,22 +4,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/freeboard.css">
+<link rel="stylesheet" type="text/css" href="../css/freeboard.css">
 <title>자유게시판</title>
 </head>
 <body>
 	<%
-	if (session.getAttribute("UserId") == null) {
+	if (session.getAttribute("member") == null) {
 	%>
 		<script>
 			alert("로그인 후 이용해주세요");
-			location.href= "../login/LoginForm.jsp";
+			location.href= "../membership/login.do;"
 		</script>
 	<%
 	} else {
 	%>
 		<script>
-			alert("<%=session.getAttribute("member") %>회원님, 로그인하셨습니다.");
+			alert("<%=session.getAttribute("UserName") %>회원님, 로그인하셨습니다.");
 		</script>
 	<%
 	}
@@ -32,10 +32,10 @@
         </h1>
         <div class="gnb_right">
             <div class="info_update">
-                <a href="../memb">정보수정</a>
+                <a href="../membership/infoEdit.do">정보수정</a>
             </div>
             <div class="login_btn">
-                <a href="../login/LogoutProcess.jsp">로그아웃</a>
+                <a href="../membership/logout.do">로그아웃</a>
             </div>
         </div>
     </header>
