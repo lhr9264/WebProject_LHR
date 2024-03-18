@@ -25,7 +25,7 @@
     <div id="wrapper">
         <div class="header">
             <h1 class="logo">
-                <a href="로그인페이지">
+                <a href="../membership/login.do">
                     <span class="blind">로고</span>
                 </a>
             </h1>

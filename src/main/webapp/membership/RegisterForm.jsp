@@ -30,7 +30,7 @@
     <div id="wrapper">
         <div class="header">
             <h1 class="logo">
-                <a href="../">
+                <a href="../membership/register.do">
                     <span class="blind">로고</span>
                 </a>
             </h1>

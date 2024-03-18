@@ -26,7 +26,7 @@
 	%>
     <header id="header">
         <h1 class="logo">
-            <a href="/새로고침">
+            <a href="../board/freebordForm.jsp">
                 <span class="blind">로고</span>
             </a>
         </h1>

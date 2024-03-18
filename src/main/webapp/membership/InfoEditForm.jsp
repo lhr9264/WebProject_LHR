@@ -24,16 +24,16 @@
 <body>
     <header id="header">
         <h1 class="logo">
-            <a href="/새로고침">
+            <a href="../membership/infoEdit.do">
                 <span class="blind">로고</span>
             </a>
         </h1>
         <div class="gnb_right">
             <div class="info_update">
-                <a href="정보수정">게시판</a>
+                <a href="../board/freeboardForm.jsp">게시판</a>
             </div>
             <div class="login_btn">
-                <a href="/로그인">로그아웃</a>
+                <a href="../membership/logout.do">로그아웃</a>
             </div>
         </div>
     </header>
