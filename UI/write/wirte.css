@@ -1,0 +1,219 @@
+a {
+    text-decoration: none;
+}
+#header {
+    width: 100%;
+    display: block;
+    position: relative;
+    color: #737881;
+    font-size: 12px;
+    border-bottom: 1px solid #dde1e5;
+    background-color: #fff;
+}
+#header .logo {
+    margin: 0;
+}
+#header .logo a {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 62px;
+    background: url(../images/3vgG14140114789.gif);
+    margin: 0 auto;
+}
+#header .logo .blind {
+    display: none;
+}
+#header .gnb_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 62px;
+    padding-right: 11px;
+    text-align: right;
+    display: flex;
+    overflow: hidden;
+}
+#header .gnb_right>div {
+    margin-right: 8px;
+}
+#header .login_btn {
+    display: inline-block;
+    padding: 13px 9px 0 0;
+    margin-right: 8px;
+}
+#header .login_btn a{
+    display: block;
+    height: 36px;
+    padding: 7px 18px 0;
+    font-size: 15px;
+    color: #080410;;
+    text-align: center;
+    border-radius: 19px;
+    border: 2px solid #17191d;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .15s all;
+}
+#header .login_btn a:hover {
+    color: #fff;
+    background-color: #0077ff;
+    border-color: #0077ff;
+}
+#header .info_update {
+    display: block;
+    height: 62px;
+    padding: 24px 3px 0;
+}
+#header .info_update a {
+    color: #17191d;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#container {
+    background: url(../images/bg_sub_community.png) center 0 no-repeat;
+}
+.community {
+    width: 100%;
+    min-width: 1240px;
+    width: 1280px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #141432;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.board_header {
+    height: 250px;
+    position: relative;
+}
+.board_header .tit {
+    padding-top: 47px;
+}
+.board_header .tit h1 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+.board_header .tit span {
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0;
+    font-weight: 300;
+}
+.board_header .tab_list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.board_header .tab_list ul {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+.board_header .tab_list li {
+    border-color: #5ec7b8;
+    border-right: 1px solid #67c07c;
+}
+.board_header .tab_list li:active {
+    border-bottom: 1px solid #e5e5e5;
+}
+.board_header .tab_list ul>li>a{
+    background-color: #6ee5d2;
+    height: 80px;
+    color: #fff;
+    line-height: 80px;
+    font-size: 18px;
+    position: relative;
+    width: 212px;
+    display: block;
+    text-align: center;
+}
+.board_header .tab_list a:active {
+    background-color: #fff;
+    color: #000;
+}
+
+.board_list {
+    padding-top: 67px;
+}
+.board .header {
+    position: relative;
+    height: 50px;
+    margin-bottom: 30px;
+}
+.board .header .tit {
+    font-size: 28px;
+    color: #151432;
+    margin-bottom: 30px;
+    line-height: 50px;
+    float: left;
+}
+
+.board .write_wrap .title {
+    border-top: 10px solid #3e3d3e;
+    overflow: hidden;
+    height: 32px;
+    padding: 16px 32px 16px 32px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.board .write_wrap .title strong {
+    float: left;
+    width: 56px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+}
+.board .write_wrap .title input {
+    float: left;
+    width: 650px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+    color: #919199;
+    border: none;
+}
+.board .write_wrap .content {
+    padding: 32px;
+}
+.board .write_wrap .content textarea {
+    border: none;
+    width: 100%;
+    height: 560px;
+    vertical-align: top;
+    font-size: 18px;
+}
+.board .btn_area {
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+.board .btn_area a:first-child {
+    display: inline-block;
+    width: 320px;
+    font-size: 22px;
+    height: 80px;
+    background: #0bd4b6;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+}
+.board .btn_area a {
+    display: inline-block;
+    width: 320px;
+    font-size: 22px;
+    height: 80px;
+    background: #3e3d55;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+}

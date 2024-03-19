@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../css/login.css">
-<title>Login</title>
+<title>로그인</title>
 <script>
     function showPopup() {
         const urlParams = new URLSearchParams(window.location.search);

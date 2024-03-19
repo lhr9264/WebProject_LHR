@@ -51,10 +51,20 @@ String 형태로 저장되고, 주로 프로그램에서 사용할 설정값을 
 	<param-name>OraclePwd</param-name>
 	<param-value>1234</param-value>
 </context-param>
+
 <!-- 세선 유지시간 -->
 <session-config>
  <session-timeout>20</session-timeout>
 </session-config>
+
+<context-param>
+	<param-name>POSTS_PER_PAGE</param-name>
+	<param-value>10</param-value>
+</context-param>
+<context-param>
+	<param-name>PAGES_PER_BLOCK</param-name>
+	<param-value>5</param-value>
+</context-param>
 
 <servlet>
 	<servlet-name>RegisterController</servlet-name>
@@ -92,11 +102,21 @@ String 형태로 저장되고, 주로 프로그램에서 사용할 설정값을 
     <url-pattern>/membership/infoEdit.do</url-pattern>
 </servlet-mapping>
 
+<servlet>
+  	<servlet-name>ListController</servlet-name>
+  	<servlet-class>board.ListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ListController</servlet-name>
+  	<url-pattern>/board/freeboard.do</url-pattern>
+  </servlet-mapping>
+
 <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.css</url-pattern>
     <url-pattern>*.svg</url-pattern>
     <url-pattern>*.gif</url-pattern>
+    <url-pattern>*.png</url-pattern>
 </servlet-mapping>
 </web-app>
 

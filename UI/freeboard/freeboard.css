@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+}
+
+
 #header {
     width: 100%;
     display: block;
@@ -70,16 +75,77 @@
 
 /* ****************************** */
 #container {
+    background: url(../images/bg_sub_community.png) center 0 no-repeat;
+}
+.community {
     width: 100%;
     min-width: 1240px;
+    width: 1280px;
     margin: 0 auto;
     font-size: 14px;
     color: #141432;
     letter-spacing: -1px;
     line-height: 1;
 }
+.board_header {
+    height: 250px;
+    position: relative;
+}
+.board_header .tit {
+    padding-top: 47px;
+}
+.board_header .tit h1 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+.board_header .tit span {
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0;
+    font-weight: 300;
+}
+.board_header .tab_list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.board_header .tab_list ul {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+.board_header .tab_list li {
+    border-color: #5ec7b8;
+    border-right: 1px solid #67c07c;
+}
+.board_header .tab_list li:active {
+    border-bottom: 1px solid #e5e5e5;
+}
+.board_header .tab_list ul>li>a{
+    background-color: #6ee5d2;
+    height: 80px;
+    color: #fff;
+    line-height: 80px;
+    font-size: 18px;
+    position: relative;
+    width: 212px;
+    display: block;
+    text-align: center;
+}
+.board_header .tab_list a:active {
+    background-color: #fff;
+    color: #000;
+}
 
-.board {
+.board_list {
     padding-top: 67px;
 }
 .board .header {
@@ -93,4 +159,177 @@
     margin-bottom: 30px;
     line-height: 50px;
     float: left;
+}
+.board .utils {
+    float: right;
+    height: 50px;
+    box-sizing: border-box;
+    width: 520px;
+}
+.board .utils .num {
+    float: left;
+    font-size: 15px;
+    color: #151432;
+    vertical-align: middle;
+    line-height: 50px;
+    margin-right: 20px;
+}
+.board .utils .select_wrap {
+    float: left;
+    height: 50px;
+    border: 1px solid #3e3d55;
+    width: 127px;
+    margin-right: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+.board .utils .select_wrap select {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    vertical-align: middle;
+}
+.board .utils .select_wrap option {
+    font-weight: normal;
+    display: block;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    white-space: nowrap;
+}
+.board .utils .form_wrap {
+    float: right;
+    border: 1px solid #3e3d55;
+    width: 290px;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.board .utils .form_wrap input {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.board .utils .form_wrap button {
+    background: #3e3d55;
+    width: 66px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.board .utils .form_wrap button span {
+    background-image: url(../images/sprite_210600.png);
+    background-position: -877px -662px;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+}
+
+.board_list .list_wrap {
+    border-top: 10px solid #3e3d55;
+}
+.board_list .list_wrap table {
+    border-spacing: 0;
+}
+.board_list .list_wrap tr {
+    font-size: 16px;
+    color: #7a7984;
+    position: relative;
+    width: 1280px;
+}
+.board_list .list_wrap tr th {
+    display: block;
+    height: 44px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #3e3d55;
+    text-align: center;
+    line-height: 41px;
+    float: left;
+    margin-right: 10px;
+}
+.board_list .list_wrap tr th:nth-child(1) {
+    width: 84px;
+}
+.board_list .list_wrap tr th:nth-child(2) {
+    width: 596px;
+}
+.board_list .list_wrap tr th:nth-child(3) {
+    width: 280px;
+}
+.board_list .list_wrap tr th:nth-child(4) {
+    width: 83px;
+}
+.board_list .list_wrap tr th:nth-child(5) {
+    width: 83px;
+}
+.board_list .list_wrap tr th:nth-child(6) {
+    width: 104px;
+    margin-right: 0;
+}
+.board_list .list_wrap tr td {
+    display: block;
+    height: 76px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e2e2e6;
+    text-align: center;
+    line-height: 76px;
+    float: left;
+    margin-right: 10px;
+    color: #151432;
+}
+
+.board_list .list_wrap tr .a {
+    width: 84px;
+}
+
+.board_list .list_wrap tr td:nth-child(2) {
+    width: 596px;
+}
+.board_list .list_wrap tr td:nth-child(3) {
+    width: 280px;
+}
+.board_list .list_wrap tr td:nth-child(4) {
+    width: 83px;
+}
+.board_list .list_wrap tr td:nth-child(5) {
+    width: 83px;
+}
+.board_list .list_wrap tr td:nth-child(6) {
+    width: 104px;
+    margin-right: 0;
+}
+
+.footer {
+    padding-top: 30px;
+}
+.footer .btn_area {
+    float: right;
+    text-align: center;
+}
+.footer .btn_area .write_btn {
+    font-size: 15px;
+    color: #fff;
+    line-height: 50px;
+    width: 195px;
+    height: 50px;
+    background: #3e3d55;
+    display: block;
+    text-decoration: none
+}
+.footer .btn_area .write_icon {
+    background-image: url(../images/sprite_210600.png);
+    background-position: -720px -872px;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: top;
+    margin-top: 15px;
+    display: inline-block;
 }

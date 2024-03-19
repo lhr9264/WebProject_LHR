@@ -46,7 +46,7 @@ public class LoginController extends HttpServlet {
         	session.setAttribute("UserId", member.getId());
         	session.setAttribute("UserName", member.getName());
 
-            response.sendRedirect("../board/freeboardForm.jsp");
+            response.sendRedirect("../board/freeboard.do");
         } else {
             response.sendRedirect("../membership/login.do?error=incorrectCredentials");
         }

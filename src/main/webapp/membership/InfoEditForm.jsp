@@ -30,7 +30,7 @@
         </h1>
         <div class="gnb_right">
             <div class="info_update">
-                <a href="../board/freeboardForm.jsp">게시판</a>
+                <a href="../board/freeboard.do">게시판</a>
             </div>
             <div class="login_btn">
                 <a href="../membership/logout.do">로그아웃</a>
